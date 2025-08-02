@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="zjuGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="100" cy="100" r="95" fill="url(#zjuGradient)" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- 浙江大学文字 -->
+  <text x="100" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">浙江大学</text>
+  <text x="100" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">ZHEJIANG</text>
+  <text x="100" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">UNIVERSITY</text>
+  
+  <!-- 装饰性元素 -->
+  <circle cx="100" cy="140" r="3" fill="white" opacity="0.8"/>
+  <circle cx="85" cy="140" r="2" fill="white" opacity="0.6"/>
+  <circle cx="115" cy="140" r="2" fill="white" opacity="0.6"/>
+</svg> 

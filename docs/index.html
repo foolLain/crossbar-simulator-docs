@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossbar Simulator - 忆阻器阵列仿真软件</title>
+    <meta name="description" content="专业的忆阻器阵列仿真软件，支持时域和频域分析，提供3D可视化功能">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <span>Crossbar Simulator</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">功能特性</a>
+                <a href="#download" class="nav-link">下载</a>
+                <a href="#about" class="nav-link">关于</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    专业的忆阻器阵列仿真软件
+                </h1>
+                <p class="hero-subtitle">
+                    基于先进的物理模型，提供精确的时域和频域分析，支持3D可视化，为忆阻器研究提供强大工具
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        立即下载
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        了解更多
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="chip-animation">
+                    <div class="chip-container">
+                        <div class="chip-body">
+                            <div class="chip-core"></div>
+                            <div class="chip-pins">
+                                <!-- 上排引脚 -->
+                                <div class="pin-row pin-top">
+                                    <div class="pin" data-index="0"></div>
+                                    <div class="pin" data-index="1"></div>
+                                    <div class="pin" data-index="2"></div>
+                                    <div class="pin" data-index="3"></div>
+                                    <div class="pin" data-index="4"></div>
+                                    <div class="pin" data-index="5"></div>
+                                    <div class="pin" data-index="6"></div>
+                                    <div class="pin" data-index="7"></div>
+                                </div>
+                                <!-- 下排引脚 -->
+                                <div class="pin-row pin-bottom">
+                                    <div class="pin" data-index="8"></div>
+                                    <div class="pin" data-index="9"></div>
+                                    <div class="pin" data-index="10"></div>
+                                    <div class="pin" data-index="11"></div>
+                                    <div class="pin" data-index="12"></div>
+                                    <div class="pin" data-index="13"></div>
+                                    <div class="pin" data-index="14"></div>
+                                    <div class="pin" data-index="15"></div>
+                                </div>
+                                <!-- 左排引脚 -->
+                                <div class="pin-column pin-left">
+                                    <div class="pin" data-index="16"></div>
+                                    <div class="pin" data-index="17"></div>
+                                    <div class="pin" data-index="18"></div>
+                                    <div class="pin" data-index="19"></div>
+                                    <div class="pin" data-index="20"></div>
+                                    <div class="pin" data-index="21"></div>
+                                    <div class="pin" data-index="22"></div>
+                                    <div class="pin" data-index="23"></div>
+                                </div>
+                                <!-- 右排引脚 -->
+                                <div class="pin-column pin-right">
+                                    <div class="pin" data-index="24"></div>
+                                    <div class="pin" data-index="25"></div>
+                                    <div class="pin" data-index="26"></div>
+                                    <div class="pin" data-index="27"></div>
+                                    <div class="pin" data-index="28"></div>
+                                    <div class="pin" data-index="29"></div>
+                                    <div class="pin" data-index="30"></div>
+                                    <div class="pin" data-index="31"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能特性 -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>核心功能</h2>
+                <p>强大的仿真能力，满足您的所有需求</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>时域仿真</h3>
+                    <p>精确的时域分析，支持脉冲响应、瞬态分析等，帮助您深入理解忆阻器的动态特性。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>频域分析</h3>
+                    <p>全面的频域特性分析，包括S参数计算、频率响应等，为电路设计提供重要参考。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>3D可视化</h3>
+                    <p>直观的3D图形界面，实时显示仿真结果，支持多角度观察和数据交互。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>参数配置</h3>
+                    <p>灵活的参数设置界面，支持自定义忆阻器模型参数，满足不同研究需求。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                    <h3>数据导出</h3>
+                    <p>支持多种格式的数据导出，便于后续分析和报告生成。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>高性能</h3>
+                    <p>优化的算法实现，确保仿真计算的高效性和准确性。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术规格 -->
+    <section class="specs">
+        <div class="container">
+            <div class="section-header">
+                <h2>技术规格</h2>
+                <p>基于先进技术的专业仿真平台</p>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-number">64×64</div>
+                    <div class="spec-label">阵列规模</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-number">3D</div>
+                    <div class="spec-label">可视化</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-number">实时</div>
+                    <div class="spec-label">仿真速度</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-number">多格式</div>
+                    <div class="spec-label">数据导出</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-header">
+                <h2>下载软件</h2>
+                <p>选择适合您系统的版本</p>
+            </div>
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Windows</h3>
+                    <p>支持 Windows 10/11</p>
+                    <div class="download-info">
+                        <span class="version">v1.0.0</span>
+                        <span class="size">~150 MB</span>
+                    </div>
+                                               <a href="https://github.com/your-username/crossbar-simulator/releases/latest/download/crossbar-simulator-windows.exe" class="btn btn-download">
+                               <i class="fas fa-download"></i>
+                               下载 Windows 版本
+                           </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3>macOS</h3>
+                    <p>支持 macOS 10.15+</p>
+                    <div class="download-info">
+                        <span class="version">v1.0.0</span>
+                        <span class="size">~180 MB</span>
+                    </div>
+                                               <a href="https://github.com/your-username/crossbar-simulator/releases/latest/download/crossbar-simulator-macos.dmg" class="btn btn-download">
+                               <i class="fas fa-download"></i>
+                               下载 macOS 版本
+                           </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>Linux</h3>
+                    <p>支持 Ubuntu 18.04+</p>
+                    <div class="download-info">
+                        <span class="version">v1.0.0</span>
+                        <span class="size">~160 MB</span>
+                    </div>
+                                               <a href="https://github.com/your-username/crossbar-simulator/releases/latest/download/crossbar-simulator-linux.AppImage" class="btn btn-download">
+                               <i class="fas fa-download"></i>
+                               下载 Linux 版本
+                           </a>
+                </div>
+            </div>
+            <div class="download-note">
+                <p><i class="fas fa-info-circle"></i> 系统要求：4GB RAM，2GB 可用磁盘空间</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>关于 Crossbar Simulator</h2>
+                    <p>Crossbar Simulator 是由浙江大学开发的专业忆阻器阵列仿真软件。我们致力于为研究人员和工程师提供最先进的仿真工具，帮助他们更好地理解和设计忆阻器电路。</p>
+                    <p>软件基于最新的物理模型和算法，提供精确的仿真结果和直观的可视化界面，是忆阻器研究的理想选择。</p>
+                    <!-- <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">活跃用户</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">研究机构</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">稳定性</div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="about-visual">
+                    <div class="university-logo">
+                        <img src="assets/zju-logo.svg" alt="浙江大学" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Crossbar Simulator</h3>
+                    <p>专业的忆阻器阵列仿真软件</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>产品</h4>
+                    <ul>
+                        <li><a href="#features">功能特性</a></li>
+                        <li><a href="#download">下载</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">反馈建议</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>法律</h4>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">使用条款</a></li>
+                        <li><a href="#">许可证</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Crossbar Simulator. 由浙江大学开发维护。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
