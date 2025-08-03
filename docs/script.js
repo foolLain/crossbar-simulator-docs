@@ -177,22 +177,56 @@ function initChipAnimation() {
     });
 }
 
+// Windows下载处理函数
+window.handleWindowsDownload = function() {
+    // 显示下载提示
+    showNotification('正在准备下载 Windows 版本...', 'info');
+    
+    // 使用实际的下载链接
+    const downloadUrl = 'https://github.com/foolLain/crossbar-simulator-docs/releases/download/win/memristor-simulator-0.0.0-setup.exe';
+    
+    // 延迟一下让用户看到提示，然后开始下载
+    setTimeout(() => {
+        showNotification('Windows 版本下载已开始', 'success');
+        
+        // 直接打开下载链接
+        window.open(downloadUrl, '_blank');
+    }, 1000);
+};
+
 // 下载按钮功能
 function initDownloadButtons() {
     const downloadButtons = document.querySelectorAll('.btn-download');
     
     downloadButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             // 显示下载提示
             const platform = this.closest('.download-card').querySelector('h3').textContent;
             showNotification(`正在准备下载 ${platform} 版本...`, 'info');
             
-            // 模拟下载延迟
-            setTimeout(() => {
-                showNotification(`${platform} 版本下载已开始`, 'success');
-            }, 1000);
+            // 获取下载链接
+            const downloadUrl = this.getAttribute('href');
+            
+            // 检查链接是否有效
+            if (downloadUrl && downloadUrl !== '#') {
+                // 延迟一下让用户看到提示，然后开始下载
+                setTimeout(() => {
+                    showNotification(`${platform} 版本下载已开始`, 'success');
+                    // 创建一个隐藏的链接来触发下载
+                    const link = document.createElement('a');
+                    link.href = downloadUrl;
+                    link.download = '';
+                    link.style.display = 'none';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, 1000);
+            } else {
+                // 如果没有有效的下载链接，显示错误提示
+                setTimeout(() => {
+                    showNotification(`${platform} 版本暂不可用，请稍后再试`, 'error');
+                }, 1000);
+            }
         });
     });
 }
