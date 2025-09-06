@@ -183,7 +183,7 @@ window.handleWindowsDownload = function() {
     showNotification('正在准备下载 Windows 版本...', 'info');
     
     // 使用实际的下载链接
-    const downloadUrl = 'https://github.com/foolLain/crossbar-simulator-docs/releases/download/win/memristor-simulator-0.0.1-setup.exe';
+    const downloadUrl = 'https://github.com/foolLain/crossbar-simulator-docs/releases/download/win/memristor-simulator-0.0.0-setup.exe';
     
     // 延迟一下让用户看到提示，然后开始下载
     setTimeout(() => {
